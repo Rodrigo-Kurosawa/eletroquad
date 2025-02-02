@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <model name='triangulo_azul'>
+    <link name='link'>
+      <visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.8 0.8 0.006</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://triangulo_azul/materials/scripts/</uri>
+            <uri>model://triangulo_azul/materials/textures/</uri>
+            <name>triangulo_azul</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <box>
+            <size>0.8 0.8 0.005</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

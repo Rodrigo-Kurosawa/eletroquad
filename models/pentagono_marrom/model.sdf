@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<sdf version='1.7'>
+  <model name='pentagono_marrom'>
+    <link name='link'>
+      <visual name='visual'>
+        <geometry>
+          <box>
+            <size>0.8 0.8 0.006</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>model://pentagono_marrom/materials/scripts/</uri>
+            <uri>model://pentagono_marrom/materials/textures/</uri>
+            <name>pentagono_marrom</name>
+          </script>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry>
+          <box>
+            <size>0.8 0.8 0.005</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

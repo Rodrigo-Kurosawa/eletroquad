@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="indoor_arena">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- ground plane {-->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <min_depth>0.01</min_depth>
+                <max_vel>0.0</max_vel>
+              </ode>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="grass">
+          <pose>0 0 0 0 0 0</pose>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://grass_plane/meshes/grass_plane.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+    <!-- Include the aruco100 model with the specified pose -->
+    <model name="casa_laranja">
+      <include>
+        <uri>model://casa_laranja</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>3 3 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="circulo_azul">
+      <include>
+        <uri>model://circulo_azul</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>-3 -3 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="cruz_rosa">
+      <include>
+        <uri>model://cruz_rosa</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>1 0 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="estrela_verde">
+      <include>
+        <uri>model://estrela_verde</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>-1 0 0 0 0 0</pose>
+      </include>
+    </model>
+        <model name="hexagono_vermelho">
+      <include>
+        <uri>model://hexagono_vermelho</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>2 1 0 0 0 0</pose>
+      </include>
+    </model>
+    <model name="pentagono_marrom">
+      <include>
+        <uri>model://pentagono_marrom</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>-2 -1 0 0 0 0</pose>
+      </include>
+    </model>
+    <model name="quadrado_marrom">
+      <include>
+        <uri>model://quadrado_marrom</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+    <model name="triangulo_azul">
+      <include>
+        <uri>model://triangulo_azul</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>-3 0 0 0 0 0</pose>
+      </include>
+    </model>
+    <model name="parede">
+      <include>
+        <uri>model://parede</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>0 0 0 0 0 0</pose>
+      </include>
+    </model>
+
+  </world>
+</sdf>

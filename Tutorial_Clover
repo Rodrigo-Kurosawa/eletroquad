@@ -1,0 +1,33 @@
+### Voce ja deve ter ROS instalado
+
+1 - 	cd ~/catkin_ws
+	echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+	source ~/catkin_ws/devel/setup.bash
+
+
+2 - vamos instalar o Pacote do Clover 
+	cd ~/catkin_ws/src
+	git clone --single-branch --branch swarm_in_blocks https://github.com/Grupo-SEMEAR-USP/clover.git
+	cd ~/catkin_ws
+	rosdep install --from-paths src --ignore-src -y
+	/usr/bin/python3 -m pip install -r ~/catkin_ws/src/clover/clover/requirements.txt
+	sudo apt install python3-pip
+	pip install -r ~/catkin_ws/src/clover/clover/requirements.txt
+
+3 - vamos instalar a px4, usamos uma versao especifica (--branch v1.12.0) por conta do clover (talvez a mais nova funcione, mas nao tive a curiosidade de testar)
+
+	cd
+	git clone --recursive --depth 1 --branch v1.12.0 https://github.com/PX4/PX4-Autopilot.git ~/PX4-Autopilot
+	ln -s ~/PX4-Autopilot ~/catkin_ws/src/
+	ln -s ~/PX4-Autopilot/Tools/sitl_gazebo ~/catkin_ws/src/
+	ln -s ~/PX4-Autopilot/mavlink ~/catkin_ws/src/
+	~/PX4-Autopilot/Tools/setup/ubuntu.sh
+	pip3 install --user toml
+	ln -s ~/catkin_ws/src/clover/clover_simulation/airframes/* ~/PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/airframes/
+	sudo -E sh -c '/opt/ros/noetic/lib/mavros/install_geographiclib_datasets.sh'
+
+4 - (pode demorar e travar o pc, tive que reninciar o meu)
+	cd ~/catkin_ws
+	catkin_make -j4 (pode colocar j8 se nao for)
+	
+	

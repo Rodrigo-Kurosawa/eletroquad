@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="phase" default="1"/>
+
+    <include file="$(find eletroquad)/launch/gazebo.launch">
+        <arg name="world" value="$(find eletroquad)/worlds/fase$(arg phase).world"/>
+    </include>
+
+    <include file="$(find eletroquad)/launch/clover_simulated.launch">
+        <arg name="x" value="0"/>
+        <arg name="y" value="0"/>
+        <arg name="z" value="0.2"/>
+    </include>
+
+    <node pkg="eletroquad" type="master_node.py" name="masterNode" output="screen" />
+
+
+</launch>
