@@ -8,8 +8,8 @@ import rosnode
 import rospy  # biblioteca padrao para trabalhar com ros em python
 # from custom_msgs.msg import BoundingBox, BoundingBoxes
 from clover.srv import GetTelemetry, GetTelemetryRequest
-from custom_msgs.srv import (Map2DPoint, Map2DPointRequest, MapEdit,
-                            MapEditRequest)
+# from custom_msgs.srv import (Map2DPoint, Map2DPointRequest, MapEdit,
+#                             MapEditRequest)
 # from std_msgs.msg import Bool
 # from std_msgs.msg import Float32
 from geometry_msgs.msg import Point, Pose2D

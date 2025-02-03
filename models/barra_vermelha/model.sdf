@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="barra_vermelha">
+    <!-- Define o modelo como estático (não se move) -->
+    <static>true</static>
+    
+    <link name="link">
+      <!-- Elemento visual: define a aparência da barra -->
+      <visual name="visual">
+        <geometry>
+          <cylinder>
+            <!-- Defina o raio e a altura (comprimento) do cilindro -->
+            <radius>0.1</radius>
+            <length>2.5</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1.0 0.0 0.0 1.0</ambient>  <!-- Vermelho -->
+          <diffuse>1.0 0.0 0.0 1.0</diffuse>
+        </material>
+      </visual>
+      
+      <!-- Elemento de colisão: geralmente igual à geometria visual -->
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>0.1</radius>
+            <length>2.5</length>
+          </cylinder>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

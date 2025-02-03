@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="indoor_arena">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- ground plane {-->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <min_depth>0.01</min_depth>
+                <max_vel>0.0</max_vel>
+              </ode>
+            </contact>
+            <friction>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name="grass">
+          <pose>0 0 0 0 0 0</pose>
+          <cast_shadows>false</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://grass_plane/meshes/grass_plane.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+<model name="circulo_azul">
+      <include>
+        <uri>model://circulo_azul</uri>
+        <!-- Pose ( x y z r p y ) -->
+        <pose frame=''>0 0 0 0 0 0</pose>
+      </include>
+</model>
+
+<model name="barra_azul">
+    <include>
+    <uri>model://barra_azul</uri>
+    <!-- Pose ( x y z r p y ) -->
+    <pose frame=''>4 3 0 0 0 0</pose>
+    </include>
+</model>
+
+<model name="barra_preto_fosco">
+    <include>
+    <uri>model://barra_preto_fosco</uri>
+    <!-- Pose ( x y z r p y ) -->
+    <pose frame=''>10 -1 0 0 0 0</pose>
+    </include>
+</model>
+
+<model name="barra_rosa">
+    <include>
+    <uri>model://barra_rosa</uri>
+    <!-- Pose ( x y z r p y ) -->
+    <pose frame=''>7 1 0 0 0 0</pose>
+    </include>
+</model>
+
+<model name="barra_vermelha">
+    <include>
+    <uri>model://barra_vermelha</uri>
+    <!-- Pose ( x y z r p y ) -->
+    <pose frame=''>1 2 0 0 0 0</pose>
+    </include>
+</model>
+
+  </world>
+</sdf>
