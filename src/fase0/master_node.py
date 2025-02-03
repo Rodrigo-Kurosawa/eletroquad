@@ -71,8 +71,6 @@ def main():
     print(cf.yellow("Aguardando chamada do serviço /start_phase"))
     while not rospy.is_shutdown():
         mestre.update()
-        if (self.fsm == 'Finish'):
-            break
 
 
 if __name__ == '__main__':

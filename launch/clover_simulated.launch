@@ -59,7 +59,7 @@
         <env name="PX4_SIM_MODEL" value="$(arg vehicle)"/>
         <env name="PX4_ESTIMATOR" value="$(arg est)"/>
     </node> -->
-    <node name="sitl" pkg="px4" type="px4" output="$(arg output)" args="$(find cbr)/ROMFS/px4fmu_common -s etc/init.d-posix/rcS">
+    <node name="sitl" pkg="px4" type="px4" output="$(arg output)" args="$(find eletroquad)/ROMFS/px4fmu_common -s etc/init.d-posix/rcS">
         <env name="PX4_SIM_MODEL" value="$(arg vehicle)"/>
         <env name="PX4_ESTIMATOR" value="$(arg est)"/>
     </node>
