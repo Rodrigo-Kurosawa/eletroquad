@@ -53,7 +53,7 @@
     <include>
     <uri>model://barra_azul</uri>
     <!-- Pose ( x y z r p y ) -->
-    <pose frame=''>4 3 0 0 0 0</pose>
+    <pose frame=''>4 3 1.25 0 0 0</pose>
     </include>
 </model>
 
@@ -61,7 +61,7 @@
     <include>
     <uri>model://barra_preto_fosco</uri>
     <!-- Pose ( x y z r p y ) -->
-    <pose frame=''>10 -1 0 0 0 0</pose>
+    <pose frame=''>10 -1 1.25 0 0 0</pose>
     </include>
 </model>
 
@@ -69,7 +69,7 @@
     <include>
     <uri>model://barra_rosa</uri>
     <!-- Pose ( x y z r p y ) -->
-    <pose frame=''>7 1 0 0 0 0</pose>
+    <pose frame=''>7 1 1.25 0 0 0</pose>
     </include>
 </model>
 
@@ -77,7 +77,7 @@
     <include>
     <uri>model://barra_vermelha</uri>
     <!-- Pose ( x y z r p y ) -->
-    <pose frame=''>1 2 0 0 0 0</pose>
+    <pose frame=''>1 2 1.25 0 0 0</pose>
     </include>
 </model>
 

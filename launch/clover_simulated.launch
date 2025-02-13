@@ -136,7 +136,7 @@
         <param name="reference_frames/body" value="map"/>
         <param name="reference_frames/base_link" value="map"/>
         <param name="reference_frames/navigate_target" value="map"/>
-        <param name="reference_frames/main_camera_optical" value="map"/>
+        <param name="reference_frames/main__optical" value="map"/>
 
         <param name="target_frame" value="navigate_target"/>
         <param name="setpoint" value="setpoint"/>

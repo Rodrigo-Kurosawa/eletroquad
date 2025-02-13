@@ -12,7 +12,17 @@
         <arg name="z" value="0.2"/>
     </include>
 
-    <node pkg="eletroquad" type="master_node.py" name="masterNode" output="screen" />
+    <group if="$(eval phase == 0)">
+        <node pkg="eletroquad" type="phase0_master.py" name="master_node0" output="screen">
+            <param name="phase" value="$(arg phase)"/>
+        </node>
+    </group>
 
+    <group if="$(eval phase == 1)">
+        <node pkg="eletroquad" type="phase1_master.py" name="master_node1" output="screen">
+            <param name="phase" value="$(arg phase)"/>
+        </node>
+        <node pkg="eletroquad" type="visao.py" name="Visao" output="screen"/>
+    </group>
 
 </launch>
