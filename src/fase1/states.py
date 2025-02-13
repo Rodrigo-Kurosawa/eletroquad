@@ -36,7 +36,6 @@ class Yaw(State):
         elif self.tail('no_bars'):
             return Land
             
-        
 class Foward(State):
     def __init__(self,name="") -> None:
         super().__init__(name)
